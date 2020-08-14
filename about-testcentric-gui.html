@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - Command Line</title>
+        <title>TestCentric - TestCentric Runner</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -31,7 +31,7 @@
 
         
     </head>
-    <body class="hold-transition wyam layout-boxed  ">    
+    <body class="hold-transition wyam layout-boxed layout-top-nav ">    
         <div class="top-banner"></div>
         <div class="wrapper with-container">
             <!-- Header -->
@@ -47,10 +47,6 @@
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
-                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
-                            <span class="sr-only">Toggle side menu</span>
-                            <i class="fa fa-chevron-circle-right"></i>
-                        </a>
                                         
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -62,8 +58,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li><a href="/testcentric-gui/about-testcentric-gui">About TestCentric Runner</a></li>
-        <li class="active"><a href="/testcentric-gui/docs">Documentation</a></li>
+                                    <li class="active"><a href="/testcentric-gui/about-testcentric-gui">About TestCentric Runner</a></li>
+        <li><a href="/testcentric-gui/docs">Documentation</a></li>
         <li><a href="https://github.com/TestCentric/testcentric-gui"><i class="fa fa-github"></i> Source Code</a></li>
  
                         </ul>       
@@ -75,7 +71,7 @@
             </header>
             
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar ">
+            <aside class="main-sidebar hidden">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
     <div id="infobar-headings"></div>
@@ -87,17 +83,6 @@
 
                     <ul class="sidebar-menu">
                         
-
-                <li><a href="/testcentric-gui/docs/main-window">Main Window</a></li>
-                <li><a href="/testcentric-gui/docs/main-menu">Main Menu</a></li>
-                <li><a href="/testcentric-gui/docs/context-menu">Context Menu</a></li>
-                <li><a href="/testcentric-gui/docs/mini-gui">Mini-Gui</a></li>
-                <li><a href="/testcentric-gui/docs/settings-dialog">Settings Dialog</a></li>
-                <li><a href="/testcentric-gui/docs/extensions-dialog">Extensions Dialog</a></li>
-                <li><a href="/testcentric-gui/docs/test-properties">Test Properties</a></li>
-                <li class="selected"><a href="/testcentric-gui/docs/command-line">Command Line</a></li>
-                <li><a href="/testcentric-gui/docs/release-notes">Release Notes</a></li>
-                <li><a href="/testcentric-gui/docs/license">License</a></li>
 
                     </ul>
                             
@@ -111,78 +96,12 @@
 
 
 		<section class="content-header">
-			<h1>Command Line</h1>
+			<h1>TestCentric Runner</h1>
 		</section>
 	<section class="content">
-		<p><strong>TestCentric</strong> is invoked from the command line as follows:</p>
-<pre><code>TESTCENTRIC [inputfiles] [options]
-</code></pre>
-<p>For example,</p>
-<pre><code>TESTCENTRIC mytests.dll
-TESTCENTRIC onetest.dll anothertest.dll --run
-TESTCENTRIC myproject.nunit
-</code></pre>
-<p>If <strong>TestCentric</strong> is started without any files specified, it automatically loads the most recently loaded test file. Alternatively, you may specify one or more assemblies or supported project types.</p>
-<p><strong>NOTE:</strong> The types of projects supported depends on the project loader extensions that are installed. Without any extensions installed, only assemblies (<code>.dll</code> or <code>.exe</code>) are permitted.</p>
-<h3 id="options-supported">Options Supported</h3>
-<table class="table">
-<thead>
-<tr>
-<th>Option</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>--config=CONFIG</td>
-<td>Specify the CONFIG to use for any project files loaded</td>
-</tr>
-<tr>
-<td>--noload</td>
-<td>Suppress loading of the most recent test file.</td>
-</tr>
-<tr>
-<td>--run</td>
-<td>Automatically run the loaded tests.</td>
-</tr>
-<tr>
-<td>--unattended</td>
-<td>In conjunction with --run, causes the GUI to exit immediately after running</td>
-</tr>
-<tr>
-<td>--process=PROCESS</td>
-<td>PROCESS isolation for test assemblies. Values: <code>Single</code>, <code>Separate</code>, <code>Multiple</code>. If not specified, defaults to <code>Separate</code> for a single assembly or <code>Multiple</code> for more than one.</td>
-</tr>
-<tr>
-<td>--inprocess</td>
-<td>Synonym for <code>--process:Single</code></td>
-</tr>
-<tr>
-<td>--domain=DOMAIN</td>
-<td>DOMAIN isolation for test assemblies. Values: <code>None</code>, <code>Single</code>, <code>Multiple</code>. If not specified, defaults to <code>Single</code> for a single assembly or <code>Multiple</code> for more than one.</td>
-</tr>
-<tr>
-<td>--x86</td>
-<td>Run tests in an X86 process on 64-bit systems.</td>
-</tr>
-<tr>
-<td>--agents=NUMBER</td>
-<td>Specify the maximum NUMBER of test assembly agents to run at one time. If not specified, there is no limit.</td>
-</tr>
-<tr>
-<td>--work=PATH</td>
-<td>PATH to directory used for any output files by default.</td>
-</tr>
-<tr>
-<td>--trace=LEVEL</td>
-<td>Set internal trace level. Valid values are <code>Off</code>, <code>Error</code>, <code>Warning</code>, <code>Info</code> or <code>Debug</code>. <code>Verbose</code> is a synonym for <code>Debug</code>.</td>
-</tr>
-<tr>
-<td>--help</td>
-<td>Display the help message and exit.</td>
-</tr>
-</tbody>
-</table>
+		<p>NUnit V2 came with a GUI runner in addition to the console runner. Beginning with NUnit 3,
+no GUI runner is provided. The TestCentric Runner fills that need.</p>
+<p>The 1.x releases of the GUI look and work very much like the NUnit V2 GUI. Of course, they support NUnit 3 tests and - using the standard NUnit extension - NUnit V2 tests as well.</p>
 
 	</section>
                 
