@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - TestCentric Runner</title>
+        <title>TestCentric - TestCentric GUI Runner</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -58,7 +56,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li class="active"><a href="/testcentric-gui/about-testcentric-gui">About TestCentric Runner</a></li>
+                                    <li class="active"><a href="/testcentric-gui/about-testcentric-gui">About TestCentric GUI</a></li>
         <li><a href="/testcentric-gui/docs">Documentation</a></li>
         <li><a href="https://github.com/TestCentric/testcentric-gui"><i class="fa fa-github"></i> Source Code</a></li>
  
@@ -74,7 +72,12 @@
             <aside class="main-sidebar hidden">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#prerequisites">Prerequisites</a></p>
+<p><a href="#installation">Installation</a></p>
+<p><a href="#versioning">Versioning</a></p>
+<p><a href="#license">License</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -96,12 +99,33 @@
 
 
 		<section class="content-header">
-			<h1>TestCentric Runner</h1>
+			<h1>TestCentric GUI Runner</h1>
 		</section>
 	<section class="content">
 		<p>NUnit V2 came with a GUI runner in addition to the console runner. Beginning with NUnit 3,
-no GUI runner is provided. The TestCentric Runner fills that need.</p>
-<p>The 1.x releases of the GUI look and work very much like the NUnit V2 GUI. Of course, they support NUnit 3 tests and - using the standard NUnit extension - NUnit V2 tests as well.</p>
+no GUI runner was provided. The <strong>TestCentric Gui Runner</strong> fills that need. It is able to run
+tests written for either the NUnit 3 framework or (using a standard extension) the NUnit V2
+framework.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>The <strong>TestCentric GUI</strong> requires .NET 4.5 or later in order to function. Your own projects,
+whose tests will run under it should already have some version of the NUnit framework installed.
+Tests will run under the most appropriate environment available using agent processes. The test
+machine must have installed the  runtime, which is targeted by your tests.</p>
+<h1 id="installation">Installation</h1>
+<p>The GUI** is released in three package formats, <strong>chocolatey</strong>, <strong>nuget</strong> and <strong>zip</strong>, all
+available from the <a href="https://github.com/TestCentric/testcentric-gui/releases">GitHub project</a>
+site. The <strong>nunit package</strong> is also available from <a href="https://nunit.org">nunit.org</a> and the
+<strong>chocolatey</strong> package from, <a href="https://chocolatey.org">chocolatey.org</a>.</p>
+<p>The <strong>chocolatey</strong> package provides the best user experience and is the recommended way to install the <strong>TestCentric</strong> GUI on developer machines. Extensions installed via <strong>chocolatey</strong>
+will be recognized.</p>
+<p>The <strong>nuget</strong> package is useful if you want to ensure that the GUI is available automatically to
+every developer who works on a project. Extensions installed through <strong>nuget</strong> will be recognized.</p>
+<p>To use the <strong>zip</strong> distribution, you should simply unzip the contents into a convenient directory and create your own shortcut to <code>testcentric.exe</code>. To use it from the command-line, place the install directory on your path.</p>
+<h1 id="versioning">Versioning</h1>
+<p>The <strong>TestCentric GUI</strong> uses semantic versioning, with specific exceptions and clarification regarding what is considered a breaking change. See the <a href="./VERSIONING.md">VERSIONING</a> file for more information. The current version is 1.4.0.</p>
+<h1 id="license">License</h1>
+<p>The GUI is Open Source software, released under the MIT / X11 license. See LICENSE for a copy of the license.</p>
+<p>The software bundles a modified copy of the NUnit test engine, which is also licensed under the MIT / X11 license. In addition, the first version of the GUI is based in part on the NUnit 2.x GUI runner, released under the NUnit license. See NOTICES.txt for copyright information.</p>
 
 	</section>
                 
@@ -188,5 +212,5 @@ no GUI runner is provided. The TestCentric Runner fills that need.</p>
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
