@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - TestCentric Home</title>
+        <title>TestCentric - TestCentric GUI Runner</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -59,7 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="https://testcentric.github.io">Testcentric Home</a></li>
-        <li><a href="/testcentric-gui/about-testcentric-gui">About TestCentric GUI</a></li>
+        <li class="active"><a href="/testcentric-gui/">About TestCentric GUI</a></li>
         <li><a href="/testcentric-gui/docs">Documentation</a></li>
         <li><a href="https://github.com/TestCentric/testcentric-gui"><i class="fa fa-github"></i> Source Code</a></li>
  
@@ -75,7 +73,12 @@
             <aside class="main-sidebar hidden">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#prerequisites">Prerequisites</a></p>
+<p><a href="#installation">Installation</a></p>
+<p><a href="#versioning">Versioning</a></p>
+<p><a href="#license">License</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -97,45 +100,33 @@
 
 
 		<section class="content-header">
-			<h1>TestCentric Home</h1>
+			<h1>TestCentric GUI Runner</h1>
 		</section>
 	<section class="content">
-		<h2 id="about-testcentric">About TestCentric</h2>
-<p>The name comes from the phrase &quot;Test-Centric Development,&quot; a term I use when working with software teams. It describes an approach where pretty much everything a team does has a test of some kind behind it, ranging from micro-tests of the software to more subjective &quot;tests&quot; that help us decide what engineering practices work best for us.</p>
-<p>In addition to working with teams and conducting training, TestCentric is focused on developing tools and techniques that support that approach to software development. Currently, all the TestCentric tools are Open Source, although there may be commercial versions of some of them in the future.</p>
-<h2 id="about-me">About Me</h2>
-<p>I'm Charlie Poole and I've worked in software development since the 1970s. In 2001 I came across Extreme Programming and in particular Test-Driven Development. I was involved in the NUnit project
-beginning around 2002 and still have some involvement today.</p>
-<p>Much of the tooling that I'm hoping to create will leverage my own work on NUnit but will hopefully go beyond what has been done before.</p>
-<h2 id="software">Software</h2>
-<h3 id="testcentric-gui-runner">TestCentric GUI Runner</h3>
-<p>NUnit V2 came with a GUI runner in addition to the console runner. Beginning with NUnit 3,
-no GUI runner is provided. The TestCentric Runner fills that need.</p>
-<p>The 1.x releases of the GUI look and work very much like the NUnit V2 GUI. Of course, they support NUnit 3 tests and - using the standard NUnit extension - NUnit V2 tests as well.</p>
-<p>Documentation for the TestCentric Runner is available <a href="/docs/tcgui">here</a>.</p>
-<h3 id="experimental-gui-runner">Experimental GUI Runner</h3>
-<p>A separate Experimental GUI runner is being developed in conjunction with the standard runner. It departs significantly in appearance and function from the version 1 GUI. It will eventually be released as a major upgrade of the TestCentric Runner, version 2.0 or higher.</p>
-<p>Currently, the experimental GUI is included in our packages but is considered as pre-alpha software.</p>
-<h3 id="tc-lite-test-framework">TC-Lite Test Framework</h3>
-<p>TC-Lite is a lightweight test framework in the spirit of NUnitLite, aimed at the creation and execution of fast, independent micro-tests. Tests are self-executing, being incorporated in an executable assembly, and require no additional infrastructure beyond the framework itself.</p>
-<p>Work on TC-Lite is ongoing. Documentation for what has been implemented so far is available <a href="/docs/tclite">here</a>.</p>
-<!-- ### TestCentric Framework
-
-This is still on the drawing board, so I won't say much about it.
-
-Generally, I'm thinking of carrying forward some of NUnit's syntactic innovations in a slightly expanded form and separating the assertion facility from the test framework itself. I would also like to allow users to choose among alternate sets of features for different kinds of testing - micro-tests versus functional testing, for example.
-
-Many of the ideas that have been germinating around this new framework were nurtured by folks in the Lonely Coaches Sodality group.
-
-### TestCentric Extension for Visual Studio
-
-This is a bit more futuristic and will build on the experimental GUI to create a true VS extension (not an adapter) for running tests. This will allow the user to have the same views of tests either within VS or in a standalone GUI.
-
-I have not yet decided whether this will be Open Source, commercial or dual-licensed using two different versions.
-
-### TestCentric Test Engine
-
-I'll be evaluating whether the NUnit engine can be used to carry out all the goals of the other projects. If necessary, a separate engine will be created. -->
+		<p>NUnit V2 came with a GUI runner in addition to the console runner. Beginning with NUnit 3,
+no GUI runner was provided. The <strong>TestCentric Gui Runner</strong> fills that need. It is able to run
+tests written for either the NUnit 3 framework or (using a standard extension) the NUnit V2
+framework.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>The <strong>TestCentric GUI</strong> requires .NET 4.5 or later in order to function. Your own projects,
+whose tests will run under it should already have some version of the NUnit framework installed.
+Tests will run under the most appropriate environment available using agent processes. The test
+machine must have installed the  runtime, which is targeted by your tests.</p>
+<h1 id="installation">Installation</h1>
+<p>The GUI** is released in three package formats, <strong>chocolatey</strong>, <strong>nuget</strong> and <strong>zip</strong>, all
+available from the <a href="https://github.com/TestCentric/testcentric-gui/releases">GitHub project</a>
+site. The <strong>nunit package</strong> is also available from <a href="https://nunit.org">nunit.org</a> and the
+<strong>chocolatey</strong> package from, <a href="https://chocolatey.org">chocolatey.org</a>.</p>
+<p>The <strong>chocolatey</strong> package provides the best user experience and is the recommended way to install the <strong>TestCentric</strong> GUI on developer machines. Extensions installed via <strong>chocolatey</strong>
+will be recognized.</p>
+<p>The <strong>nuget</strong> package is useful if you want to ensure that the GUI is available automatically to
+every developer who works on a project. Extensions installed through <strong>nuget</strong> will be recognized.</p>
+<p>To use the <strong>zip</strong> distribution, you should simply unzip the contents into a convenient directory and create your own shortcut to <code>testcentric.exe</code>. To use it from the command-line, place the install directory on your path.</p>
+<h1 id="versioning">Versioning</h1>
+<p>The <strong>TestCentric GUI</strong> uses semantic versioning, with specific exceptions and clarification regarding what is considered a breaking change. See the <a href="./VERSIONING.md">VERSIONING</a> file for more information. The current version is 1.4.0.</p>
+<h1 id="license">License</h1>
+<p>The GUI is Open Source software, released under the MIT / X11 license. See LICENSE for a copy of the license.</p>
+<p>The software bundles a modified copy of the NUnit test engine, which is also licensed under the MIT / X11 license. In addition, the first version of the GUI is based in part on the NUnit 2.x GUI runner, released under the NUnit license. See NOTICES.txt for copyright information.</p>
 
 	</section>
                 
@@ -222,5 +213,5 @@ I'll be evaluating whether the NUnit engine can be used to carry out all the goa
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
