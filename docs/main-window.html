@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <title>TestCentric - Main Window</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -79,7 +77,12 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#tree-display">Tree Display</a></p>
+<p><a href="#progress-bar">Progress Bar</a></p>
+<p><a href="#result-summary">Result Summary</a></p>
+<p><a href="#result-tabs">Result Tabs</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -115,11 +118,10 @@
 			<h1>Main Window</h1>
 		</section>
 	<section class="content">
-		<h2 id="main-window">Main Window</h2>
-<p>The <strong>TestCentric</strong> Runner shows the tests in an tree display on the left of the main window and provides a visual indication of the success or failure of the tests. It allows you to selectively run single tests or suites and reloads automatically as you modify and re-compile your code. The following is a screenshot of the runner after running the tests in a sample assembly.</p>
-<p><img src="/testcentric-gui/assets/img/testcentric.png" class="img-fluid" alt="TestCentric GUI Runner" /></p>
+		<p>The <strong>TestCentric</strong> Runner shows the tests in an tree display on the left of the main window and provides a visual indication of the success or failure of the tests. It allows you to selectively run single tests or suites and reloads automatically as you modify and re-compile your code. The following is a screenshot of the runner after running the tests in a sample assembly.</p>
+<p><img src="/testcentric-gui/assets/img/testcentric.png" class="img-fluid" alt="TestCentric GUI Runner"></p>
 <p>In this example, there were a total of 31 test cases, of which 21 were run.</p>
-<h3 id="tree-display">Tree Display</h3>
+<h1 id="tree-display">Tree Display</h1>
 <p>The test tree uses both colors and symbols to indicate the test status, as follows:</p>
 <table class="table">
 <thead>
@@ -130,36 +132,39 @@
 </thead>
 <tbody>
 <tr>
-<td><img src="/testcentric-gui/assets/img/Success.png" class="img-fluid" alt="Success" /></td>
+<td><img src="/testcentric-gui/assets/img/Success.png" class="img-fluid" alt="Success"></td>
 <td>Passed</td>
 </tr>
 <tr>
-<td><img src="/testcentric-gui/assets/img/Failure.png" class="img-fluid" alt="Failure" /></td>
+<td><img src="/testcentric-gui/assets/img/Failure.png" class="img-fluid" alt="Failure"></td>
 <td>Error or Failure</td>
 </tr>
 <tr>
-<td><img src="/testcentric-gui/assets/img/Ignored.png" class="img-fluid" alt="Ignored" /></td>
+<td><img src="/testcentric-gui/assets/img/Ignored.png" class="img-fluid" alt="Ignored"></td>
 <td>Warning or Ignored</td>
 </tr>
 <tr>
-<td><img src="/testcentric-gui/assets/img/Skipped.png" class="img-fluid" alt="Skipped" /></td>
+<td><img src="/testcentric-gui/assets/img/Skipped.png" class="img-fluid" alt="Skipped"></td>
 <td>Skipped</td>
 </tr>
 <tr>
-<td><img src="/testcentric-gui/assets/img/Inconclusive.png" class="img-fluid" alt="Inconclusive" /></td>
+<td><img src="/testcentric-gui/assets/img/Inconclusive.png" class="img-fluid" alt="Inconclusive"></td>
 <td>Inconclusive</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Note:</strong> Tests marked with the <code>IgnoreAttribtute</code> are shown in yellow immediately upon loading. Similarly, non-runnable tests (e.g.: wrong argument type) are shown in red immediately, without waiting for the user to press Run.</p>
-<h3 id="progress-bar">Progress Bar</h3>
-<p>The progress bar shows the progress of the test. It is colored according to the &quot;worst&quot; result obtained: red if there were any failures, yellow if some tests were ignored and green for success.</p>
-<h3 id="result-summary">Result Summary</h3>
+<h1 id="progress-bar">Progress Bar</h1>
+<p>The progress bar shows the progress of the test. It is colored according to the "worst" result obtained: red if there were any failures, yellow if some tests were ignored and green for success.</p>
+<h1 id="result-summary">Result Summary</h1>
 <p>At the end of the test run, a summary of the results is displayed immediately below the progress bar. If the result information does not fit in the space available, hovering over it shows the full information.</p>
-<h3 id="result-tabs">Result Tabs</h3>
+<h1 id="result-tabs">Result Tabs</h1>
 <p>Three tabs along the bottom of the display show the results of running a test.</p>
-<p>The <strong>Errors and Failures</strong> tab displays the error message and stack trace for both unexpected exceptions and assertion failures. Either the raw stacktrace or actual source code for each stack location can be displayed in this tab, provided that the program was compiled with debug information.</p>
+<h2 id="errors-failures-and-warnings">Errors, Failures and Warnings</h2>
+<p>The <strong>Errors, Failures and Warnings</strong> tab displays the error message and stack trace for both unexpected exceptions and assertion failures. Either the raw stacktrace or actual source code for each stack location can be displayed in this tab, provided that the program was compiled with debug information.</p>
+<h2 id="tests-not-run">Tests Not Run</h2>
 <p>The <strong>Tests Not Run</strong> tab provides a list of all tests that were selected for running but were not run, together with the reason.</p>
+<h2 id="text-output">Text Output</h2>
 <p>The <strong>Text Output</strong> tab displays text output from the tests in a format similar to that shown by the console runner, including labels for the tests if specified by the user in the settings dialog.</p>
 
 	</section>
@@ -247,5 +252,5 @@
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
