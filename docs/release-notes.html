@@ -115,7 +115,29 @@
 			<h1>Release Notes</h1>
 		</section>
 	<section class="content">
-		<h3 id="testcentric-runner-for-nunit-1.4.1-september-3-2020">TestCentric Runner for NUnit 1.4.1 - September 3, 2020</h3>
+		<h3 id="testcentric-runner-for-nunit-1.5.0-december-8-2020">TestCentric Runner for NUnit 1.5.0 - December 8, 2020</h3>
+<p>This release includes one major new feature. The Stop button now triggers a non-forced
+stop, running all teardowns. It then gives the user the option of a forced stop in case
+the run does not terminate. In addition, it incorporates major build improvements, which
+will make it easier to do more frequent releases in the future.</p>
+<h4 id="feature">Feature</h4>
+<ul>
+<li>Implement two stage Stop, first trying non-forced and then letting user select forced stop.</li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>Version 1.4.1 release zip file is missing</li>
+<li>Clear All  and Check Failed checkboxes do not work correctly</li>
+<li>Results not being cleared in tree for each new run</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>Automate final release process</li>
+<li>Convert projects to new format</li>
+<li>Add CodeQL analysis to the build</li>
+<li>Automatically update website</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.4.1-september-3-2020">TestCentric Runner for NUnit 1.4.1 - September 3, 2020</h3>
 <p>This is primarily a bug fix release, the exception being the use of our own metadata
 assembly which is being published as a separate nuget package for use by others.</p>
 <h4 id="engine">Engine</h4>
