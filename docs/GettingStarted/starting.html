@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - Context Menu</title>
+        <title>TestCentric - Starting the GUI</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -79,7 +77,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#shortcut">Shortcut</a></p>
+<p><a href="#command-line">Command Line</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -90,24 +91,24 @@
                         
 
                 <li><a href="/testcentric-gui/docs/overview">Overview</a></li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/testcentric-gui/docs/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
                 <li><a href="/testcentric-gui/docs/GettingStarted/installation">Installing the GUI</a></li>
-                <li><a href="/testcentric-gui/docs/GettingStarted/starting">Starting the GUI</a></li>
+                <li class="selected"><a href="/testcentric-gui/docs/GettingStarted/starting">Starting the GUI</a></li>
                 <li><a href="/testcentric-gui/docs/GettingStarted/running-tests">Running Tests</a></li>
                 <li><a href="/testcentric-gui/docs/GettingStarted/test-results">Test Results</a></li>
 
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="/testcentric-gui/docs/Features">GUI Elements</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
                 <li><a href="/testcentric-gui/docs/Features/main-window">Main Window</a></li>
                 <li><a href="/testcentric-gui/docs/Features/main-menu">Main Menu</a></li>
-                <li class="selected"><a href="/testcentric-gui/docs/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/docs/Features/context-menu">Context Menu</a></li>
                 <li><a href="/testcentric-gui/docs/Features/mini-gui">Mini-Gui</a></li>
                 <li><a href="/testcentric-gui/docs/Features/settings-dialog">Settings Dialog</a></li>
                 <li><a href="/testcentric-gui/docs/Features/extensions-dialog">Extensions Dialog</a></li>
@@ -131,32 +132,27 @@
 
 
 		<section class="content-header">
-			<h1>Context Menu</h1>
+			<h1>Starting the GUI</h1>
 		</section>
 	<section class="content">
-		<!-- Page-specific styles -->
-<style>
-    img {float: right; margin-left: 20px; margin-bottom: 20px}
-</style>
-<p>The context menu is displayed when one of the tree nodes is right-clicked.</p>
-<p><img src="/testcentric-gui/assets/img/contextmenu.png" class="img-fluid" alt="Context Menu" /></p>
-<h2 id="run">Run</h2>
-<p>Runs the selected test - disabled if a test is running.</p>
-<h2 id="show-failed-assumptions">Show Failed Assumptions</h2>
-<p>Turns on and off the display of cases under a <strong>Theory</strong> that have failed
-an assumption (Inconclusive results). This menu item is only displayed for
-nodes that are part of a <strong>Theory</strong>.</p>
-<h2 id="show-checkboxes">Show Checkboxes</h2>
-<p>Turns the display of checkboxes in the tree on or off. The checkboxes may
-be used to select multiple tests for running.</p>
-<h2 id="expand-all">Expand All</h2>
-<p>Expands all the nodes in the tree.</p>
-<h2 id="collapse-all">Collapse All</h2>
-<p>Collapses all the nodes in the tree.</p>
-<h2 id="hide-tests">Hide Tests</h2>
-<p>Expands nodes in the tree as far as fixtures only, hiding the tests under each fixture.</p>
-<h2 id="properties">Properties</h2>
-<p>Displays the <a href="/testcentric-gui/docs/test-properties.html">Test Properties</a> for the selected test node.</p>
+		<h1 id="shortcut">Shortcut</h1>
+<p>If you created a shortcut after the install, simply click it!</p>
+<h1 id="command-line">Command Line</h1>
+<h2 id="chocolatey-install">Chocolatey Install</h2>
+<p>Did you install the chocolatey package? In that case just type</p>
+<pre><code class="language-cmd">testcentric
+</code></pre>
+<h2 id="directory-on-path">Directory on Path</h2>
+<p>Otherwise, if you added the install directory to the path, type</p>
+<pre><code class="language-cmd">testcentric.exe
+</code></pre>
+<h2 id="last-resort">Last Resort</h2>
+<p>If you did neither of the above, use the path to which the GUI was installed:</p>
+<pre><code class="language-cmd">&lt;path to the install directory&gt;\testcentric.exe (*)
+</code></pre>
+<p>(*) Of course, you would use a forward slash on Linux.</p>
+<p>The trick is knowing where the GUI is installed. If you used NuGet, the installation may be in various
+places, depending on the environment in which you are running. Consult the NuGet documentation.</p>
 
 	</section>
                 
@@ -243,5 +239,5 @@ be used to select multiple tests for running.</p>
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>

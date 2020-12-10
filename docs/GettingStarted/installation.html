@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - Context Menu</title>
+        <title>TestCentric - Installing the GUI</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -79,7 +77,11 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#prerequisites">Prerequisites</a></p>
+<p><a href="#choosing-a-package">Choosing a Package</a></p>
+<p><a href="#how-to-install">How To Install</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -90,24 +92,24 @@
                         
 
                 <li><a href="/testcentric-gui/docs/overview">Overview</a></li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/testcentric-gui/docs/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
-                <li><a href="/testcentric-gui/docs/GettingStarted/installation">Installing the GUI</a></li>
+                <li class="selected"><a href="/testcentric-gui/docs/GettingStarted/installation">Installing the GUI</a></li>
                 <li><a href="/testcentric-gui/docs/GettingStarted/starting">Starting the GUI</a></li>
                 <li><a href="/testcentric-gui/docs/GettingStarted/running-tests">Running Tests</a></li>
                 <li><a href="/testcentric-gui/docs/GettingStarted/test-results">Test Results</a></li>
 
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="/testcentric-gui/docs/Features">GUI Elements</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
                 <li><a href="/testcentric-gui/docs/Features/main-window">Main Window</a></li>
                 <li><a href="/testcentric-gui/docs/Features/main-menu">Main Menu</a></li>
-                <li class="selected"><a href="/testcentric-gui/docs/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/docs/Features/context-menu">Context Menu</a></li>
                 <li><a href="/testcentric-gui/docs/Features/mini-gui">Mini-Gui</a></li>
                 <li><a href="/testcentric-gui/docs/Features/settings-dialog">Settings Dialog</a></li>
                 <li><a href="/testcentric-gui/docs/Features/extensions-dialog">Extensions Dialog</a></li>
@@ -131,32 +133,93 @@
 
 
 		<section class="content-header">
-			<h1>Context Menu</h1>
+			<h1>Installing the GUI</h1>
 		</section>
 	<section class="content">
-		<!-- Page-specific styles -->
-<style>
-    img {float: right; margin-left: 20px; margin-bottom: 20px}
-</style>
-<p>The context menu is displayed when one of the tree nodes is right-clicked.</p>
-<p><img src="/testcentric-gui/assets/img/contextmenu.png" class="img-fluid" alt="Context Menu" /></p>
-<h2 id="run">Run</h2>
-<p>Runs the selected test - disabled if a test is running.</p>
-<h2 id="show-failed-assumptions">Show Failed Assumptions</h2>
-<p>Turns on and off the display of cases under a <strong>Theory</strong> that have failed
-an assumption (Inconclusive results). This menu item is only displayed for
-nodes that are part of a <strong>Theory</strong>.</p>
-<h2 id="show-checkboxes">Show Checkboxes</h2>
-<p>Turns the display of checkboxes in the tree on or off. The checkboxes may
-be used to select multiple tests for running.</p>
-<h2 id="expand-all">Expand All</h2>
-<p>Expands all the nodes in the tree.</p>
-<h2 id="collapse-all">Collapse All</h2>
-<p>Collapses all the nodes in the tree.</p>
-<h2 id="hide-tests">Hide Tests</h2>
-<p>Expands nodes in the tree as far as fixtures only, hiding the tests under each fixture.</p>
-<h2 id="properties">Properties</h2>
-<p>Displays the <a href="/testcentric-gui/docs/test-properties.html">Test Properties</a> for the selected test node.</p>
+		<h1 id="prerequisites">Prerequisites</h1>
+<p>The GUI itself requires runs under the .NET Framework version 4.5 or later, which must be installed
+on the machine. If you want tests to run under other runtimes, those runtimes must also be installed.
+Currently supported runtimes are .NET Framework 2.0 through 4.8 and .NET Core 2.1 through 3.1. Tests
+targeting .NET core 1.0, 1.1 or 2.0 run under the 2.1 test agent.</p>
+<h1 id="choosing-a-package">Choosing a Package</h1>
+<p>The GUI is released in three package formats, <strong>chocolatey</strong>, <strong>nuget</strong> and <strong>zip</strong>, all
+available from the <a href="https://github.com/TestCentric/testcentric-gui/releases">GitHub project</a>
+site. The <strong>nuget package</strong> is also available from <a href="https://nunit.org">nunit.org</a> and the
+<strong>chocolatey</strong> package from <a href="https://chocolatey.org">chocolatey.org</a>.</p>
+<p>For each release, all three packages contain the same binaries. The difference is in the user
+experience provided by each packaging ecosystem.</p>
+<h2 id="chocolatey">Chocolatey</h2>
+<p>The <strong>chocolatey</strong> package is recommended for most users. It provides the best user experience and
+is the preferred way to install the <strong>TestCentric</strong> GUI on Windows developer machines. Unfortunately,
+it is only available under Windows 7+ or Windows Server 2003+ and not at all under Linux. On GitHub,
+the chocolatey download is named <code>testcentric-gui.x.y.z.nupkg</code>, where <code>x.y.z</code> is the version.</p>
+<h3 id="advantages">Advantages</h3>
+<ol>
+<li>TestCentric is available centrally on the machine, ready for use with any project.</li>
+<li>A simple <code>choco install</code> command installs TestCentric.</li>
+<li>Engine Extensions may be installed at the same time or later using the same command.</li>
+<li>A shim is created, allowing the <code>testcentric</code> command to work from the command-line.</li>
+<li>Upgrading is done easily through <code>choco upgrade</code>.</li>
+</ol>
+<h3 id="drawbacks">Drawbacks</h3>
+<ol>
+<li>Installation requires running as administrator.</li>
+<li>Installation of chocolatey is slightly more complicated than one might like.</li>
+</ol>
+<h2 id="zip">Zip</h2>
+<p>The <strong>zip</strong> package is the easiest approach for individual developers without administrative
+access to their machines. It is also the best way to try out a new version of the GUI
+without replacing an older version installed through Chocolatey. It is also currently the
+preferred approach for developers working on Linux. On GitHub, the zip download is named
+<code>testcentric-gui-x.y.z.zip</code>, where <code>x.y.z</code> is the version.</p>
+<h3 id="advantages-1">Advantages</h3>
+<ol>
+<li>Simple copy deployment with no administrative access needed.</li>
+<li>May use a single central location on the machine.</li>
+</ol>
+<h3 id="drawbacks-1">Drawbacks</h3>
+<ol>
+<li>There is currently no simple way to add Engine Extensions to the zip installation. (I'm working on this!)</li>
+</ol>
+<h2 id="nuget">NuGet</h2>
+<p>Originally, there was no NuGet package. My feeling was that installing an executable tool, particularly a
+GUI, is a bad use of NuGet. However, some users expected it to be available, so now it is.
+Please consider the drawbacks before using it in your team.  On GitHub, the zip download is named
+<code>TestCentric.GuiRunner.x.y.z.nupkg</code>, where <code>x.y.z</code> is the version.</p>
+<h3 id="advantages-2">Advantages</h3>
+<ol>
+<li>You can install without leaving Visual Studio.</li>
+</ol>
+<h3 id="drawbacks-2">Drawbacks</h3>
+<ol>
+<li>The install must be repeated for each project with which you want to use the GUI.</li>
+<li>The package is restored whenever the project is opened, even in a headless CI environment.</li>
+<li>The GUI and its dependencies may conflict with other installed runners, which use the NUnit Engine API.</li>
+</ol>
+<h1 id="how-to-install">How To Install</h1>
+<h2 id="chocolatey-1">Chocolatey</h2>
+<ol>
+<li>Install chocolatey, if not already installed. See <a href="https://chocolatey.org/install">https://chocolatey.org/install</a>.</li>
+<li>Open an command prompt using <code>Run as Administrator</code>.</li>
+<li>Issue command <code>choco install testcentric-gui</code>.</li>
+<li>Optionally, create a desktop shortcut.</li>
+</ol>
+<h2 id="zip-1">Zip</h2>
+<ol>
+<li>Download <code>testcentric.gui-x.y.z.zip</code> from GitHub, where <code>x.y.z</code> is the version.</li>
+<li>Unzip the contents into a convenient directory.</li>
+<li>Optionally, create a shortcut to <code>testcentric.exe</code>.</li>
+<li>Optionally, add the install directory to your path.</li>
+</ol>
+<h2 id="nuget-1">NuGet</h2>
+<ol>
+<li>In Visual Studio, navigate to the project in which you want to install the GUI. Note that it doesn't
+matter which project you choose but VS requires you to choose one.</li>
+<li>Right click on either the project or its <code>References</code> and select <code>Manage NuGet</code></li>
+<li>Select <code>nuget.org</code> as the source and Browse for "TestCentric".</li>
+<li>Select the <code>TestCentric.GuiRunner</code></li>
+<li>On the right, select "Latest Stable" version or choose a specific version. Click "Install".</li>
+</ol>
 
 	</section>
                 
@@ -243,5 +306,5 @@ be used to select multiple tests for running.</p>
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>

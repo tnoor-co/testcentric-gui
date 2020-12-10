@@ -73,9 +73,7 @@
             <aside class="main-sidebar hidden">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#prerequisites">Prerequisites</a></p>
-<p><a href="#installation">Installation</a></p>
-<p><a href="#versioning">Versioning</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#versioning">Versioning</a></p>
 <p><a href="#license">License</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -107,21 +105,6 @@
 no GUI runner was provided. The <strong>TestCentric Gui Runner</strong> fills that need. It is able to run
 tests written for either the NUnit 3 framework or (using a standard extension) the NUnit V2
 framework.</p>
-<h1 id="prerequisites">Prerequisites</h1>
-<p>The <strong>TestCentric GUI</strong> requires .NET 4.5 or later in order to function. Your own projects,
-whose tests will run under it should already have some version of the NUnit framework installed.
-Tests will run under the most appropriate environment available using agent processes. The test
-machine must have installed the  runtime, which is targeted by your tests.</p>
-<h1 id="installation">Installation</h1>
-<p>The GUI is released in three package formats, <strong>chocolatey</strong>, <strong>nuget</strong> and <strong>zip</strong>, all
-available from the <a href="https://github.com/TestCentric/testcentric-gui/releases">GitHub project</a>
-site. The <strong>nunit package</strong> is also available from <a href="https://nunit.org">nunit.org</a> and the
-<strong>chocolatey</strong> package from <a href="https://chocolatey.org">chocolatey.org</a>.</p>
-<p>The <strong>chocolatey</strong> package provides the best user experience and is the recommended way to install the <strong>TestCentric</strong> GUI on developer machines. Extensions installed via <strong>chocolatey</strong>
-will be recognized.</p>
-<p>The <strong>nuget</strong> package is useful if you want to ensure that the GUI is available automatically to
-every developer who works on a project. Extensions installed through <strong>nuget</strong> will be recognized.</p>
-<p>To use the <strong>zip</strong> distribution, you should simply unzip the contents into a convenient directory and create your own shortcut to <code>testcentric.exe</code>. To use it from the command-line, place the install directory on your path.</p>
 <h1 id="versioning">Versioning</h1>
 <p>The <strong>TestCentric GUI</strong> uses semantic versioning, with specific exceptions and clarification
 regarding what is considered a breaking change. See the VERSIONING.md file in the root of the
