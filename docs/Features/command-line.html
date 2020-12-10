@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - TestCentric Runner</title>
+        <title>TestCentric - Command Line</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -89,7 +89,7 @@
                     <ul class="sidebar-menu">
                         
 
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="/testcentric-gui/docs/Features">Features</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
@@ -100,7 +100,7 @@
                 <li><a href="/testcentric-gui/docs/Features/settings-dialog">Settings Dialog</a></li>
                 <li><a href="/testcentric-gui/docs/Features/extensions-dialog">Extensions Dialog</a></li>
                 <li><a href="/testcentric-gui/docs/Features/test-properties">Test Properties</a></li>
-                <li><a href="/testcentric-gui/docs/Features/command-line">Command Line</a></li>
+                <li class="selected"><a href="/testcentric-gui/docs/Features/command-line">Command Line</a></li>
 
                     </ul>
                 </li>
@@ -120,47 +120,78 @@
 
 
 		<section class="content-header">
-			<h1>TestCentric Runner</h1>
+			<h1>Command Line</h1>
 		</section>
 	<section class="content">
-		
-<p>TestCentric Runner is a GUI test runner for the .NET world. The current release (version 1.4.0)
-   supports the NUnit 3 and NUnit V2 test frameworks. Future releases will eventually support
-   other frameworks.</p>
-
-<p>The current release is similar in appearance of the NUnit V2 GUI Runner,
-   but has internal modifications to allow it to run NUnit 3 tests.</p>
-
-			<div class="box">
-				<div class="box-body no-padding">
-					<table class="table table-striped table-hover two-cols-alt table-responsive">
-						
-						<tbody>
-								<tr>
-									<td><strong><a href="/testcentric-gui/docs/Features">Features</a></strong></td>
-									<td>
-&lt;a href=&quot;GettingStarted&quot;&gt;Key features&lt;/a&gt; of the TestCentric GUI.									</td>
-								</tr>
-								<tr>
-									<td><strong><a href="/testcentric-gui/docs/Getting%20Started">Getting Started</a></strong></td>
-									<td>
-How to &lt;a href=&quot;GettingStarted&quot;&gt;install and use&lt;/a&gt; the TestCentric GUI.									</td>
-								</tr>
-								<tr>
-									<td><strong><a href="/testcentric-gui/docs/release-notes">Release Notes</a></strong></td>
-									<td>
-Displays the Release Notes showing changes made in each release of TestCentric.									</td>
-								</tr>
-								<tr>
-									<td><strong><a href="/testcentric-gui/docs/license">License</a></strong></td>
-									<td>
-Displays the TestCentric Runner license.									</td>
-								</tr>
-						</tbody>				
-					</table>
-				</div>
-			</div> 
-
+		<p><strong>TestCentric</strong> is invoked from the command line as follows:</p>
+<pre><code>TESTCENTRIC [inputfiles] [options]
+</code></pre>
+<p>For example,</p>
+<pre><code>TESTCENTRIC mytests.dll
+TESTCENTRIC onetest.dll anothertest.dll --run
+TESTCENTRIC myproject.nunit
+</code></pre>
+<p>If <strong>TestCentric</strong> is started without any files specified, it automatically loads the most recently loaded test file. Alternatively, you may specify one or more assemblies or supported project types.</p>
+<p><strong>NOTE:</strong> The types of projects supported depends on the project loader extensions that are installed. Without any extensions installed, only assemblies (<code>.dll</code> or <code>.exe</code>) are permitted.</p>
+<h3 id="options-supported">Options Supported</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Option</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--config=CONFIG</td>
+<td>Specify the CONFIG to use for any project files loaded</td>
+</tr>
+<tr>
+<td>--noload</td>
+<td>Suppress loading of the most recent test file.</td>
+</tr>
+<tr>
+<td>--run</td>
+<td>Automatically run the loaded tests.</td>
+</tr>
+<tr>
+<td>--unattended</td>
+<td>In conjunction with --run, causes the GUI to exit immediately after running</td>
+</tr>
+<tr>
+<td>--process=PROCESS</td>
+<td>PROCESS isolation for test assemblies. Values: <code>Single</code>, <code>Separate</code>, <code>Multiple</code>. If not specified, defaults to <code>Separate</code> for a single assembly or <code>Multiple</code> for more than one.</td>
+</tr>
+<tr>
+<td>--inprocess</td>
+<td>Synonym for <code>--process:Single</code></td>
+</tr>
+<tr>
+<td>--domain=DOMAIN</td>
+<td>DOMAIN isolation for test assemblies. Values: <code>None</code>, <code>Single</code>, <code>Multiple</code>. If not specified, defaults to <code>Single</code> for a single assembly or <code>Multiple</code> for more than one.</td>
+</tr>
+<tr>
+<td>--x86</td>
+<td>Run tests in an X86 process on 64-bit systems.</td>
+</tr>
+<tr>
+<td>--agents=NUMBER</td>
+<td>Specify the maximum NUMBER of test assembly agents to run at one time. If not specified, there is no limit.</td>
+</tr>
+<tr>
+<td>--work=PATH</td>
+<td>PATH to directory used for any output files by default.</td>
+</tr>
+<tr>
+<td>--trace=LEVEL</td>
+<td>Set internal trace level. Valid values are <code>Off</code>, <code>Error</code>, <code>Warning</code>, <code>Info</code> or <code>Debug</code>. <code>Verbose</code> is a synonym for <code>Debug</code>.</td>
+</tr>
+<tr>
+<td>--help</td>
+<td>Display the help message and exit.</td>
+</tr>
+</tbody>
+</table>
 
 	</section>
                 
