@@ -1,19 +1,21 @@
-﻿<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html>
+<html>
+    <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta name="description">
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="description" />
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/testcentric-gui/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - TestCentric Overview</title>
+        <title>TestCentric - Home</title>
         <link href="/testcentric-gui/assets/css/highlight.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
-        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
+        <link href="/testcentric-gui/assets/css/theme/theme.css" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/testcentric-gui/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet">
+        <link href="/testcentric-gui/assets/css/override.css" rel="stylesheet" />
         <script src="/testcentric-gui/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/testcentric-gui/assets/js/bootstrap.min.js"></script>        
         <script src="/testcentric-gui/assets/js/app.min.js"></script>         
@@ -29,7 +31,7 @@
 
         
     </head>
-    <body class="hold-transition wyam layout-boxed  ">    
+    <body class="hold-transition wyam layout-boxed layout-top-nav ">    
         <div class="top-banner"></div>
         <div class="wrapper with-container">
             <!-- Header -->
@@ -45,10 +47,6 @@
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
-                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
-                            <span class="sr-only">Toggle side menu</span>
-                            <i class="fa fa-chevron-circle-right"></i>
-                        </a>
                                         
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -62,7 +60,7 @@
                         <ul class="nav navbar-nav">                            
                                     <li><a href="https://testcentric.github.io">Testcentric Home</a></li>
         <li class="active"><a href="/testcentric-gui/">About TestCentric GUI</a></li>
-        <li class="active"><a href="/testcentric-gui/docs">Documentation</a></li>
+        <li><a href="/testcentric-gui/docs">Documentation</a></li>
         <li><a href="https://github.com/TestCentric/testcentric-gui"><i class="fa fa-github"></i> Source Code</a></li>
  
                         </ul>       
@@ -74,14 +72,10 @@
             </header>
             
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar ">
+            <aside class="main-sidebar hidden">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#background">Background</a></p>
-<p><a href="#versioning">Versioning</a></p>
-<p><a href="#license">License</a></p>
-<hr class="infobar-hidden">
-</div>
+    <div id="infobar-headings"></div>
 
                 </section>
                 <section class="sidebar">    
@@ -90,36 +84,6 @@
 
                     <ul class="sidebar-menu">
                         
-
-                <li class="selected"><a href="/testcentric-gui/docs/overview">TestCentric Overview</a></li>
-                <li class="treeview">
-                    <a href="/testcentric-gui/docs/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/testcentric-gui/docs/GettingStarted/installation">Installing the GUI</a></li>
-                <li><a href="/testcentric-gui/docs/GettingStarted/starting">Starting the GUI</a></li>
-                <li><a href="/testcentric-gui/docs/GettingStarted/running-tests">Running Tests</a></li>
-                <li><a href="/testcentric-gui/docs/GettingStarted/test-results">Test Results</a></li>
-
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/testcentric-gui/docs/Features">GUI Elements</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/testcentric-gui/docs/Features/main-window">Main Window</a></li>
-                <li><a href="/testcentric-gui/docs/Features/main-menu">Main Menu</a></li>
-                <li><a href="/testcentric-gui/docs/Features/context-menu">Context Menu</a></li>
-                <li><a href="/testcentric-gui/docs/Features/mini-gui">Mini-Gui</a></li>
-                <li><a href="/testcentric-gui/docs/Features/settings-dialog">Settings Dialog</a></li>
-                <li><a href="/testcentric-gui/docs/Features/extensions-dialog">Extensions Dialog</a></li>
-                <li><a href="/testcentric-gui/docs/Features/test-properties">Test Properties</a></li>
-                <li><a href="/testcentric-gui/docs/Features/command-line">Command Line</a></li>
-
-                    </ul>
-                </li>
-                <li><a href="/testcentric-gui/docs/release-notes">Release Notes</a></li>
-                <li><a href="/testcentric-gui/docs/license">License</a></li>
 
                     </ul>
                             
@@ -133,24 +97,10 @@
 
 
 		<section class="content-header">
-			<h1>TestCentric Overview</h1>
+			<h1>Home</h1>
 		</section>
 	<section class="content">
-		<h1 id="background">Background</h1>
-<p>NUnit V2 came with both a console runner and a GUI. Beginning with NUnit 3, no GUI runner was provided.
-The <strong>TestCentric Gui Runner</strong> fills that need. It is able to run tests written for either the NUnit 3
-framework or (using a standard extension) the NUnit V2 framework.</p>
-<h1 id="versioning">Versioning</h1>
-<p>The <strong>TestCentric GUI</strong> uses semantic versioning, with specific exceptions and clarification
-regarding what is considered a breaking change. See the VERSIONING.md file in the root of the
-distribution for more information. The current version is 1.4.0.</p>
-<h1 id="license">License</h1>
-<p>The GUI is Open Source software, released under the MIT / X11 license. See LICENSE.txt in the root of the distribution or view it <a href="/testcentric-gui/docs/license.html">here</a>.</p>
-<p>The software bundles a modified copy of the NUnit test engine, which is also licensed under the
-MIT / X11 license. In addition, the first version of the GUI is based in part on the NUnit 2.x
-GUI runner, released under the NUnit license. See NOTICES.txt in the root of the distribution
-for more information.</p>
-
+		
 	</section>
                 
             </div>           
@@ -236,5 +186,5 @@ for more information.</p>
                 }, 500);
             });
         </script>
-    
-</body></html>
+    </body>
+</html>
